@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Qanelas Soft';
+    src: url('path/to/QanelasSoft-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Qanelas Soft', sans-serif;
+}
