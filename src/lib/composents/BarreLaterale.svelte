@@ -102,7 +102,7 @@
 <div class="container">
     <div class="conversations">
             <p>{ titre }</p>
-            <BtnConversation path="/" nom={titreConvG} message={convG} img="/images/affiche.png" />
+            <BtnConversation path="./conversation" nom={titreConvG} message={convG} img="/images/affiche.png" />
         <hr>
 
         {#if conversationBergamoteAffichee}
