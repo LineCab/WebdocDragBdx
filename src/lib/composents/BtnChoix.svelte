@@ -26,11 +26,17 @@
         background: var(--vert);
         text-align: center;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     button:hover{
         background: var(--vertAction);
         color: var(--blanc);
+    }
+
+    @media (max-width: 800px) {
+        button{
+            max-width: 100%;
+        }
     }
 </style>

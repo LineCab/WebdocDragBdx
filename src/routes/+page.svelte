@@ -1,7 +1,6 @@
 <script lang="ts">
     import '$lib/styles/style.css';
     import { goto } from "$app/navigation";
-    import { onMount } from 'svelte';
 
     let animate = false;
 
@@ -9,7 +8,7 @@
         animate = true;
         setTimeout(() => {
             goto("/conversation");
-        }, 1000); // Durée de l'animation en millisecondes
+        }, 1000);
     }
 </script>
 
@@ -103,7 +102,7 @@
     .contenu {
         display: flex;
         width: 60vw;
-        gap: 32px;
+        gap: 6vh;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -119,7 +118,7 @@
     #start {
         display: flex;
         cursor: pointer;
-        padding: 4px 20px;
+        padding: 1vh 3vw;
         border-radius: 8px;
         font-size: 24px;
         font-weight: 600;
@@ -133,5 +132,36 @@
         color: var(--noir);
         background-color: var(--blanc);
         border: 1px solid var(--noir);
+    }
+
+    @media (max-width: 800px) {
+        .accueil {
+            height: 90vh;
+            padding: 5vh 0;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        .titre{
+            margin-top: 10vh;
+            width: 90vw;
+        }
+
+        .titre p{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 5vh;
+        }
+
+        .contenu {
+            width: 90vw;
+        }
+
+        #start {
+            padding: 2vh 12vw;
+        }
     }
 </style>

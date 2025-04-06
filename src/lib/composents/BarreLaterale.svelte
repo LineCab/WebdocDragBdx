@@ -5,6 +5,7 @@
     import { messagePv } from "$lib/stores/mpStore";
     import { langue } from "$lib/stores/langueStore";
     import Notification from './Notification.svelte';
+    // import createEventDispatcher;
 
     let orlaneNotification = false;
     let bergamoteNotification = false;
@@ -97,11 +98,20 @@
         parametre = "Configuración";
     }
 
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
+
+    function closeSidebar() {
+        dispatch('close');
+    }
 </script>
 
-<div class="container">
+<div class="container" id="sidebar">
     <div class="conversations">
-            <p>{ titre }</p>
+            <div class="titre">
+                <p>{ titre }</p>
+                <img id="croix" src="/images/Fermer.svg" alt="" on:click={closeSidebar}>
+            </div>
             <BtnConversation path="./conversation" nom={titreConvG} message={convG} img="/images/affiche.png" />
         <hr>
 
@@ -170,7 +180,6 @@
         font-size: 24px;
         font-weight: 600;
         margin-left: 10px;
-        margin-bottom: 3vh;
     }
 
     hr {
@@ -194,6 +203,19 @@
 
     button img {
         height: 18px;
+    }
+
+    .titre{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        margin-bottom: 3vh;
+    }
+
+    #croix{
+        display: none;
     }
 
     @keyframes slideInFromRight {
@@ -224,5 +246,29 @@
         top: 3vh;
         opacity: 0;
         animation: slideInFromRight 0.5s ease-out forwards, slideOutToRight 0.5s ease-out forwards 4s;
+    }
+
+    @media (max-width: 700px){
+        #croix{
+            display: block;
+        }
+
+        .container {
+            width: 90vw;
+            padding: 5vh 5vw;
+            gap: 3vh;
+        }
+
+        .conversations {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        button {
+            padding: 3vh 8vw;
+            gap: 5vw;
+        }
     }
 </style>

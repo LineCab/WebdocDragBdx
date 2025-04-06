@@ -102,10 +102,14 @@
 
     .mess{
         display: flex;
-        max-width: 30vw;
+        width: 30vw;
         flex-direction: column;
         justify-content: center;
         border-radius: 8px;
+    }
+
+    .mess audio{
+        width: 100%;
     }
 
     .blanc{
@@ -144,9 +148,13 @@
         font-weight: 500;
     }
     
-	@media screen and (max-width: 400px) {
+	@media (max-width: 800px) {
+        .ligneMess{
+            gap: 2vw;
+        }
+
         .mess {
-            max-width: 60vw;
+            width: 65vw;
         }
     }
 

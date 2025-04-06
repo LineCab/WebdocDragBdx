@@ -61,4 +61,11 @@
     .entete img{
         height: 15px;
     }
+
+    @media (max-width: 800px) {
+        .notif{
+            padding: 2vh 3vh;
+            width: 60vw;
+        }
+    }
 </style>

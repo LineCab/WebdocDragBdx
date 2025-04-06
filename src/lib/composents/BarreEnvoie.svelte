@@ -59,9 +59,14 @@
         color: var(--gris);
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 800px) {
+        .barreEnvoie{
+            width: 100%;
+            gap: auto;
+            justify-content: center;
+        }
         .barre {
-            width: 60vw;
+            width: 70vw;
         }
     }
 </style>

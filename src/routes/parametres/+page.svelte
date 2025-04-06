@@ -283,4 +283,19 @@
     .notification.hide {
         animation: slideOutToRight 0.5s ease-out forwards;
     }
+
+    @media (max-width: 800px) {
+        .categories {
+            max-width: 90vw;
+        }
+
+        select {
+            width: 40vw;
+            padding: 2vh 3vw;
+        }
+
+        button {
+            padding: 2vh 8vw;
+        }
+    }
 </style>

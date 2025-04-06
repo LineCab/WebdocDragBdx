@@ -240,9 +240,19 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 400px) {
+    @media (max-width: 800px) {
+        .ligneMess{
+            gap: 2vw;
+        }
+
         .mess {
             max-width: 60vw;
+        }
+
+        .video, .photo{
+            width: 60vw;
+            height: 50vh;
+            border-radius: 4px;
         }
     }
 </style>
