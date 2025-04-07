@@ -173,7 +173,6 @@
 
     let layoutComponent: InstanceType<typeof Layout>;
 
-
     function toggleMenu() {
         layoutComponent.handleToggleMenu();
     }
@@ -295,8 +294,6 @@
         }
 
         #menu {
-            top: 20px;
-            right: 0;
             width: 30px;
             cursor: pointer;
         }

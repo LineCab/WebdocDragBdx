@@ -171,10 +171,20 @@
         });
     });
 
+    let layoutComponent: InstanceType<typeof Layout>;
+
+    function toggleMenu() {
+        layoutComponent.handleToggleMenu();
+    }
+
 </script>
 
-<Layout onReset={onReset}>
+<Layout bind:this={layoutComponent} onReset={onReset}>
     <div class="container">
+        <div class="navBar">
+            <h1>Drag Bdx</h1>
+            <img id="menu" src="images/Menu.svg" alt="menu" on:click={toggleMenu}>
+        </div>
         <div class="conversation">
 
             {#each messagesO as message}
@@ -191,7 +201,7 @@
 
         </div>  
 
-        <div class="barreUtilisateur conversation">
+        <div class="barreUtilisateur">
             <div class="reponses">
                 {#each responsesO as response}
                     <BtnChoix texte={response.text} on:click={() => handleResponse(response)} disabled={isLoading} />
@@ -255,9 +265,53 @@
         gap: 50px;
     }
 
-    @media screen and (max-width: 400px) {
+    .navBar{
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        h1{
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            font-family: "Barlow", sans-serif;
+            font-style: normal;
+            color: var(--noir);
+        }
+
+        .navBar{
+            display: flex;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 90vw;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vh 5vw;
+            background-color: rgba(238, 229, 220, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        #menu {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .barreUtilisateur {
+            width: 90vw;
+            gap: 2vh;
+            padding: 3vh 5vw;
+        } 
+
         .conversation {
-            width: 95vw;
+            width: 90vw;
+            margin-bottom: 26vh;
+        }
+        
+        .reponses {
+            gap: 12px;
         }
     }
 
