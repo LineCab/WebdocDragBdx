@@ -21,7 +21,7 @@
         <p>Découvre notre web documentaire sur le <span class="surligne">drag Bordelais</span></p>
     </div>
     <div class="contenu">
-        <p>Nous venons de t’ajouter dans un groupe de conversation où tu retrouvera différentes personne directement lié au monde du drag. Échanges avec eux pour en apprendre davantage sur ce milieu !</p>
+        <p>Nous venons de t’ajouter dans un groupe de conversation où tu retrouveras différentes personnes directement liées au monde du drag. Échange avec eux pour en apprendre davantage sur ce milieu !</p>
         <button id="start" on:click={startAnimation}>Commencer</button>
     </div>
 </div>

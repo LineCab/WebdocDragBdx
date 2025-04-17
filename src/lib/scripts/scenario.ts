@@ -6,7 +6,7 @@ type Scenario = {
 export const scenarios: Record<string, Scenario> = {
     start: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", text: "Hello ! Aujourd'hui je te fais découvrir la scène et le monde du Drag à Bordeaux à travers ses différentes familles et collectivités !", src: "/images/orlane.png" }
+            { type: "texteBlanc", pseudo:"Orlane", text: "Hello ! Aujourd'hui je te fais découvrir la scène Drag bordelaise à travers ses différentes familles et collectifs !", src: "/images/orlane.png" }
         ],
         responses: [
             { text: "Dis m'en plus sur le drag !", next: "defDrag"},
@@ -16,11 +16,11 @@ export const scenarios: Record<string, Scenario> = {
 
     defDrag: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", text: "Le drag est un art de la transformation, une performance du genre, mais aussi une histoire de révolte. C’est une scène où se joue bien plus qu’un spectacle. Pour beaucoup, c’est un espace de libération, d’exploration et de revendication", src: "/images/orlane.png" },
+            { type: "texteBlanc", pseudo:"Orlane", text: "Le drag est un art de la performance, une exagération du genre, mais aussi une histoire de révolte. C’est une scène où se joue bien plus qu’un spectacle. Pour beaucoup, c’est un espace de libération, d’exploration et de revendication", src: "/images/orlane.png" },
             { type: "audioBlanc", pseudo:"Freya Kor", src: "/images/freya.png", img: "/audios/freya-le-drag.mp3", transcription: "Le drag pour moi, c’est une opportunité artistique qui peut servir comme développement personnel ou comme thérapie. C'est une occasion en fait de pouvoir expérimenter un peu d'autres dessous, une autre version de soi-même qui peut prendre forme de la manière dont on veut, dans la direction qu’on veut qu'on soit, dans n'importe quel genre qu'on veut. Et peut nous ouvrir une voie qui de base, on peut penser que certaines voies ne peuvent pas êtres destinées pour nous et c'est une réinvention quelque part de nous mêmes, de notre genre, de notre réalité, des fois de notre sexualité et de notre place dans le monde. Et de pouvoir le faire avec des paillettes, des perruques et des collants, et bah ça fait du bien", text: ""}
         ],
         responses: [
-            { text: "OK, mais du coup c’est quoi les familles et collectivités ?", next: "famille" }
+            { text: "OK, mais du coup c’est quoi les familles et les collectifs ?", next: "famille" }
         ]
     },
 
@@ -28,8 +28,8 @@ export const scenarios: Record<string, Scenario> = {
         messages: [
             { type: "texteBlanc", pseudo:"Nova", text: "Je vais t’expliquer tout ça,", src: "/images/nova.png" },
             { type: "texteBlanc", pseudo:"Nova", text: "On parle de House Drag, nous de maison Drag et de House of Ballroom. A la base, c'était des gens qui étaient jetés de chez eux parce qu'ils étaient juste différents et queer. Du coup ont été recueillis", src: "/images/nova.png" },
-            { type: "texteBlanc", pseudo:"Nova", text: "Dans un monde hostile, les houses offrent un refuge à la communauté queer. Un foyer, un nom, une identité. À Bordeaux, cet héritage perciste. Des collectifs dynamiques concervent l'esprit des houses tout en réinventant leurs règles. Chaque maison à sa patte artistique ou sa spécialité. Par exemple, la familips fait des choses très familiales avec principalement des queens et TechnoCircus sont plus spécialicés dans le drag créatures", src: "/images/nova.png" },
-            { type: "texteBlanc", pseudo:"Nova", text: "Ici, nous faisons tous partie d’une famille ou d'un collectif différent ! 😊 ", src: "/images/nova.png" }
+            { type: "texteBlanc", pseudo:"Nova", text: "Dans un monde hostile, les houses offrent un refuge à la communauté queer. Un foyer, un nom, une identité. À Bordeaux, cet héritage perciste. Des collectifs dynamiques concervent l'esprit des houses tout en réinventant leurs règles. Chaque maison à sa patte artistique ou sa spécialité. Par exemple, la familips fait des choses très familiales avec principalement des queens et TechnoCircus est plus spécialicé dans le drag créature", src: "/images/nova.png" },
+            { type: "texteBlanc", pseudo:"Nova", text: "Ici, nous faisons tous partie d’une famille ou d'un collectif différent !", src: "/images/nova.png" }
         ],
         responses: [
             { text: "Je comprends mieux. Mais d'ailleurs, est-ce que le drag a un lien avec la politique ?", next: "politique"}
@@ -39,7 +39,7 @@ export const scenarios: Record<string, Scenario> = {
     politique: {
         messages: [
             { type: "texteBlanc", pseudo:"Mofwazée", text: "Heyy, il y a pas longtemps j'ai fais une interview où je parle de politique, ça pourrait t'intéresser 😉", src: "/images/mofwazee.png" },
-            { type: "mediaBlanc", mediaType: "video", pseudo:"Mofwazée", text: "", src: "/images/mofwazee.png", img: "/images/mofwazee_politique.png", video: "/videos/mofwazée-politique.mp4", transcription: "Alors il y a forcément un lien entre drag et politique. Notre existence-même est politiques. Je suis moi-même politique en tant que drag noire. Issu des îles... des colonies au final. Pour moi c'est plus que politique en fait" }
+            { type: "mediaBlanc", mediaType: "video", pseudo:"Mofwazée", text: "", src: "/images/mofwazee.png", img: "/images/mofwazee_politique.png", video: "/videos/mofwazée-politique.mp4", transcription: "Alors il y a forcément un lien entre drag et politique. Notre existence-même est politiques. Je suis moi-même politique en tant que drag noire. Issue des îles... des colonies au final. Pour moi c'est plus que politique en fait" }
         ],
         responses: [
             { text: "D'accord, merci c'est beaucoup plus clair !", next: "baShow"}
@@ -60,7 +60,7 @@ export const scenarios: Record<string, Scenario> = {
     organisation: {
         messages: [
             { type: "texteBlanc", pseudo:"Bergamote", mp:"bergamote", text: "Ok je vais t'expliquer tout ça :", src: "/images/bergamote.png" },
-            { type: "texteBlanc", pseudo:"Bergamote", text: "L'organisation d'un show drag implique de structurer l'événement comme une compagnie de théâtre ou de danse, en réservant des salles adaptées (comme une salle de concert avec une bonne technique, du bon matériel, car les show de Drag sont presque systématiquement accompagnés de musique, de chant et/ou de danse), tout en gérant les aspects logistiques (trains, hôtels pour les artistes invités). De plus, il faut s'assurer que tout est bien coordonné pour que le public ait une expérience réussie.", src: "/images/bergamote.png" },
+            { type: "texteBlanc", pseudo:"Bergamote", text: "Organiser un show drag c'est comme pour les compagnies de théâtre ou de danse, en réservant des salles adaptées (comme une salle de concert avec une bonne technique, du bon matériel, car les show de Drag sont presque systématiquement accompagnés de musique, de chant et/ou de danse), tout en gérant les aspects logistiques (trains, hôtels pour les artistes invités). De plus, il faut s'assurer que tout est bien coordonné pour que le public ait une expérience exceptionnelle.", src: "/images/bergamote.png" },
         ],
         responses: [
             { text: "Comment les artistes se préparent ?", next: "artiste1"},
@@ -70,8 +70,7 @@ export const scenarios: Record<string, Scenario> = {
 
     artiste1: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", mp:"orlane", text: "C'est plus sympa de te faire découvrir leur processus de préparation en vidéo !🎬", src: "/images/orlane.png" },
-            { type: "mediaBlanc", mediaType: "video", pseudo:"Orlane", text: "", src: "/images/orlane.png", img: "/images/preparation.jpg", video: "/videos/preparation.mp4", transcription: "" }
+            { type: "texteBlanc", pseudo:"Bergamote", text: "Avant je mettais 4h à me préparer, maintenant j'en mets plus que 1h30.                                             4h c'est une demi journée, 'imagines. Le confienement à aidé. Parceque pendant le conf on dse faisait des visio pdnt en ser regardant, en discutant. Je me suis bcp entrainé au make up vu que j'avais rien d'autre à faire. Moyenne 2h pour se mettre en drag complètement" , src: "/images/bergamote.png" },
         ],
         responses: [
             { text: "Je veux savoir comment se déroule un show !", next: "show2"}
@@ -126,8 +125,7 @@ export const scenarios: Record<string, Scenario> = {
 
     artiste2: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", mp:"orlane", text: "C'est plus sympa de te faire découvrir leur processus de préparation en vidéo !🎬", src: "/images/orlane.png" },
-            { type: "mediaBlanc", mediaType: "video", pseudo:"Orlane", text: "", src: "/images/orlane.png", img: "/images/preparation.jpg", video: "/videos/preparation.mp4", transcription: "" }
+            { type: "texteBlanc", pseudo:"Orlane", text: " ", src: "/images/orlane.png" }
         ],
         responses: [
             { text: "J'aimerais bien en savoir plus sur la communauté", next: "end"}
@@ -148,8 +146,7 @@ export const scenarios: Record<string, Scenario> = {
 
     artiste3: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", mp:"orlane", text: "C'est plus sympa de te faire découvrir leur processus de préparation en vidéo !🎬", src: "/images/orlane.png" },
-            { type: "mediaBlanc", mediaType: "video", pseudo:"Orlane", text: "", src: "/images/orlane.png", img: "/images/preparation.jpg", video: "/videos/preparation.mp4", transcription: "" }
+            { type: "texteBlanc", pseudo:"Orlane", text: " ", src: "/images/orlane.png" }
         ],
         responses: [
             { text: "La technique derrière doit être compliquée... Comment ça se passe ?", next: "technique3"}
@@ -170,7 +167,7 @@ export const scenarios: Record<string, Scenario> = {
 
     end: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", text: "Voilà ! Maintenant tu sais tout sur le monde du drag et en particulier celui de Bordeaux. N'hésite pas à revisionner les médias partagés lors de notre échange 😉 Si tu souhaite recommencer l'aventure du début, tu as un bouton réinitialiser dans les paramètres", src: "/images/orlane.png" },
+            { type: "texteBlanc", pseudo:"Orlane", mp:"orlane", text: "Voilà ! Maintenant tu sais tout sur le monde du drag et en particulier celui de Bordeaux. N'hésite pas à revisionner les médias partagés lors de notre échange 😉 Si tu souhaite recommencer l'aventure du début, tu as un bouton réinitialiser dans les paramètres", src: "/images/orlane.png" },
             { type: "texteBlanc", pseudo:"Orlane", text: "On espère que ce format t'as plu et ne te prive pas de la partager !", src: "/images/orlane.png" }
         ],
         responses: [
