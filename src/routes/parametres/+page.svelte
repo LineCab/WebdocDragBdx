@@ -10,7 +10,9 @@
 
     function handleReset() {
         showNotif();
-        setTimeout(() =>{reset();}, 2000);
+        setTimeout(() => {
+            reset(); 
+        }, 2000);
     }
 
     function showNotif() {
@@ -36,21 +38,21 @@
     let texteReset = "";
     let btnReset = "";
 
-    $: if ($langue === "fr"){
+    $: if ($langue === "fr") {
         titre = "Paramètres";
         catLangue = "Langue de l'application";
-        texteLangue = "En cas de changement de langue, les messages déjà envoyés lors de l'expérience ne seront pas modifiés."
+        texteLangue = "En cas de changement de langue, les messages déjà envoyés lors de l'expérience ne seront pas modifiés.";
         catReset = "Réinitialiser l'expérience";
         texteReset = "Réinitialiser l'expérience permet de recommencer l'histoire du début et ainsi faire différents choix.";
         btnReset = "Réinitialiser";
-    }else if ($langue === "en"){
+    } else if ($langue === "en") {
         titre = "Settings";
         catLangue = "App Language";
         texteLangue = "Changing the language will not modify the messages already sent during the experience.";
         catReset = "Reset Experience";
         texteReset = "Resetting the experience will restart the story from the beginning, allowing you to make different choices.";
         btnReset = "Reset";
-    }else if ($langue === "es"){
+    } else if ($langue === "es") {
         titre = "Configuraciones";
         catLangue = "Idioma de la aplicación";
         texteLangue = "Cambiar el idioma no modificará los mensajes ya enviados durante la experiencia.";
@@ -59,10 +61,21 @@
         btnReset = "Restablecer";
     }
 
+    let layoutComponent: InstanceType<typeof Layout>;
+
+    function toggleMenu() {
+        layoutComponent.handleToggleMenu();
+    }
+
 </script>
 
-<Layout onReset={reset}>
+<Layout bind:this={layoutComponent}  onReset={handleReset}>
     <div class="container">
+        <div class="navBar">
+            <h1>Drag Bdx</h1>
+            <img id="menu" src="images/Menu.svg" alt="menu" on:click={toggleMenu}>
+        </div>
+
         <h1>{titre}</h1>
         <div class="categories">
             <div class="titreCat bold">
@@ -284,7 +297,14 @@
         animation: slideOutToRight 0.5s ease-out forwards;
     }
 
+    .navBar{
+        display: none;
+    }
+
     @media (max-width: 800px) {
+        .container{
+            margin-top: 60px;
+        }
         .categories {
             max-width: 90vw;
         }
@@ -296,6 +316,36 @@
 
         button {
             padding: 2vh 8vw;
+        }
+
+        h1{
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            font-family: "Barlow", sans-serif;
+            font-style: normal;
+            color: var(--noir);
+        }
+
+        .navBar{
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 90vw;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vh 5vw;
+            background-color: rgba(238, 229, 220, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        #menu {
+            width: 30px;
+            cursor: pointer;
         }
     }
 </style>
