@@ -31,6 +31,7 @@
         align-items: center;
         border-radius: 30px;
         background: var(--blanc);
+        border: 1px solid var(--violet);
     }
 
     .barre{
@@ -42,6 +43,7 @@
         gap: 4px;
         border-radius: 10px;
         background: var(--blanc);
+        border: 1px solid var(--violet);
     }
 
     .btn{
@@ -52,7 +54,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 30px;
-        background: var(--vertAction);
+        background: var(--violet);
     }
 
     p {

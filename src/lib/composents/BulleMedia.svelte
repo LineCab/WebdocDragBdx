@@ -150,7 +150,7 @@
         align-items: center;
         border-radius: 8px;
         gap: 2vh;
-        background: var(--blanc);
+        background: var(--violetClair);
     }
 
     .blanc p{

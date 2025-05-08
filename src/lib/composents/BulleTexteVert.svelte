@@ -51,12 +51,12 @@
         align-items: center;
         border-radius: 8px;
         gap: 2vh;
-        background: var(--vert);
+        background: var(--violet);
     }
 
     .textMess{
         align-self: stretch;
-        color: var(--noir);
+        color: var(--blanc);
         font-size: 14px;
         font-weight: 500;
         line-height: 2.4vh;

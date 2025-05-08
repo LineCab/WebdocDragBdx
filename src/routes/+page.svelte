@@ -110,9 +110,10 @@
 
     .surligne{
         display: flex;
-        padding: 2px 4px;
+        padding: 2px 8px;
         margin: 0 4px;
-        background-color: #8ED600;
+        color: var(--blanc);
+        background-color: var(--violet);
     }
 
     #start {
@@ -124,13 +125,13 @@
         font-weight: 600;
         text-transform: uppercase;
         color: var(--blanc);
-        background-color: var(--noir);
-        border: 1px solid var(--noir);
+        background: var(--violet);
+        border: 1px solid var(--violet);
     }
 
     #start:hover {
         color: var(--noir);
-        background-color: var(--blanc);
+        background: none;
         border: 1px solid var(--noir);
     }
 

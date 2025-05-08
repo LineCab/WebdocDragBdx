@@ -153,7 +153,7 @@
         top: 0;
         height: 90vh;
         width: 100%;
-        background: var(--noir);
+        background-image: url(/images/fondMP.png);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -185,20 +185,25 @@
     hr {
         width: 100%;
         border: none;
-        border-top: 1px solid var(--beige);
+        border-top: 1px solid var(--blanc);
     }
 
     button {
         cursor: pointer;
         background: none;
-        border: 1px solid var(--beige);
-        color: var(--beige);
+        border: 1px solid var(--blanc);
+        color: var(--blanc);
         width: fit-content;
         padding: 1.5vh 1.5vw;
         border-radius: 8px;
         display: flex;
         gap: 1vw;
         align-items: center;
+    }
+
+    button:hover{
+        background: var(--violet);
+        border: 1px solid var(--blanc);
     }
 
     button img {

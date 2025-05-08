@@ -253,7 +253,7 @@
         margin: 0 auto;
         height: 20vh;
         padding: 2vh 0 4vh 0;
-        background: var(--beige);
+        background: #F6F6F6;
         box-shadow: 0px -15px 1px -15px var(--gris);
         z-index: 10;
     }

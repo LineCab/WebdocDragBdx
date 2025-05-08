@@ -3,5 +3,6 @@
 @import '$lib/styles/fonts.css';
 
 html {
-    background: var(--beige);
+    background: var(--blanc);
+    background-image: url(images/fondDrag.svg);
 }

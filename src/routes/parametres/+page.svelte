@@ -226,7 +226,6 @@
         cursor: pointer;
         width: 15vw;
         padding: 1.5vh 1vw;
-        background: var(--beige);
         border-radius: 8px;
         border: 1px solid var(--noir);
         outline: none;
@@ -239,7 +238,7 @@
 
     button {
         cursor: pointer;
-        background: none;
+        background: var(--blanc);
         border: 1px solid var(--noir);
         width: fit-content;
         padding: 1.5vh 1.5vw;
@@ -250,9 +249,9 @@
     }
 
     button:hover {
-        background: var(--noir);
-        color: var(--beige);
-        border-color: var(--beige);
+        background: var(--violetClair);
+        color: var(--blanc);
+        border-color: var(--violet);
     }
 
     ul {
@@ -291,6 +290,7 @@
         top: 3vh;
         opacity: 0;
         animation: slideInFromRight 0.5s ease-out forwards;
+        z-index: 999;
     }
 
     .notification.hide {

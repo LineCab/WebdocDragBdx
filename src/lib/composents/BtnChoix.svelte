@@ -22,15 +22,16 @@
         justify-content: center;
         align-items: center;
         border-radius: 8px;
-        border: 1px solid var(--vertAction);
-        background: var(--vert);
+        border: 1px solid var(--violet);
+        background: var(--violetClair);
+        color: var(--blanc);
         text-align: center;
         cursor: pointer;
         font-size: 16px;
     }
 
     button:hover{
-        background: var(--vertAction);
+        background: var(--violet);
         color: var(--blanc);
     }
 
