@@ -130,7 +130,7 @@
     }
 
     .pseudo{
-        color: var(--gris);
+        color: var(--grisFonce);
         font-size: 12px;
     }
 
@@ -157,6 +157,7 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 2.4vh;
+        color: var(--blanc);
     }
     
     .video, .photo{

@@ -108,7 +108,7 @@
                 <p>Informations sur l'application</p>
             </div>
             <p class="bold">Conception et développement</p>
-            <p>Ce projet a été réalisé dans le cadre de la formation Métiers du Multimédia et de l'Internet (MMI) Bordeaux à l'IUT Bordeaux Montaigne, situé au 12 rue de l'Église.</p>
+            <p>Ce projet a été réalisé dans le cadre de la formation Métiers du Multimédia et de l'Internet (MMI) Bordeaux à l'IUT Bordeaux Montaigne, situé au 1 Rue Jacques Ellul, 33800 Bordeaux.</p>
             <p class="bold">Equipe de projet</p>
             <ul>
                 <li>Bartholomé Duteil : <span class="italique">Chargé de la création sonore</span></li>
@@ -130,7 +130,7 @@
                 <p>Application Information</p>
             </div>
             <p class="bold">Design and Development</p>
-            <p>This project was carried out as part of the Multimedia and Internet Professions (MMI) training program in Bordeaux at the IUT Bordeaux Montaigne, located at 12 rue de l'Église.</p>
+            <p>This project was carried out as part of the Multimedia and Internet Professions (MMI) training program in Bordeaux at the IUT Bordeaux Montaigne, located at 1 Rue Jacques Ellul, 33800 Bordeaux.</p>
             
             <p class="bold">Project Team</p>
             <ul>
@@ -155,7 +155,7 @@
                 <p>Información sobre la aplicación</p>
             </div>
             <p class="bold">Diseño y Desarrollo</p>
-            <p>Este proyecto fue realizado en el marco de la formación en Profesiones del Multimedia y de Internet (MMI) en Burdeos, en el IUT Bordeaux Montaigne, ubicado en el 12 rue de l'Église.</p>
+            <p>Este proyecto fue realizado en el marco de la formación en Profesiones del Multimedia y de Internet (MMI) en Burdeos, en el IUT Bordeaux Montaigne, ubicado en el 1 Rue Jacques Ellul, 33800 Bordeaux.</p>
             
             <p class="bold">Equipo del Proyecto</p>
             <ul>

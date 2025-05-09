@@ -83,7 +83,7 @@
     }
 
     .pseudo{
-        color: var(--gris);
+        color: var(--grisFonce);
         font-size: 12px;
     }
 
@@ -98,6 +98,7 @@
         display: flex;
         flex-direction: column;
         gap: 1vh;
+        color: var(--grisFonce);
     }
 
     .mess{
@@ -112,10 +113,14 @@
         width: 100%;
     }
 
+    source{
+        background: var(--violetClair);
+    }
+
     .blanc{
         padding: 8px 12px;
         gap: 2vh;
-        background: var(--blanc);
+        background: var(--violetClair);
         width: fit-content;
         max-width: 45vw;
     }
@@ -124,6 +129,7 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 2.4vh;
+        color: var(--blanc);
     }
 
     .infos{
@@ -135,7 +141,7 @@
     button{
         background: none;
         border: none;
-        color: var(--gris);
+        color: var(--grisFonce);
         font-size: 12px;
         font-weight: 500;
         cursor: pointer;

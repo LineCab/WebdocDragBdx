@@ -28,7 +28,7 @@ export const scenarios: Record<string, Scenario> = {
         messages: [
             { type: "texteBlanc", pseudo:"Nova", text: "Je vais t’expliquer tout ça,", src: "/images/nova.png" },
             { type: "texteBlanc", pseudo:"Nova", text: "On parle de House Drag, nous de maison Drag et de House of Ballroom. A la base, c'était des gens qui étaient jetés de chez eux parce qu'ils étaient juste différents et queer. Du coup ont été recueillis", src: "/images/nova.png" },
-            { type: "texteBlanc", pseudo:"Nova", text: "Dans un monde hostile, les houses offrent un refuge à la communauté queer. Un foyer, un nom, une identité. À Bordeaux, cet héritage perciste. Des collectifs dynamiques concervent l'esprit des houses tout en réinventant leurs règles. Chaque maison à sa patte artistique ou sa spécialité. Par exemple, la familips fait des choses très familiales avec principalement des queens et TechnoCircus est plus spécialicé dans le drag créature", src: "/images/nova.png" },
+            { type: "texteBlanc", pseudo:"Nova", text: "Dans un monde hostile, les houses offrent un refuge à la communauté queer. Un foyer, un nom, une identité. À Bordeaux, cet héritage persiste. Des collectifs dynamiques concervent l'esprit des houses tout en réinventant leurs règles. Chaque maison à sa patte artistique ou sa spécialité. Par exemple, la familips fait des choses très familiales avec principalement des queens et TechnoCircus est plus spécialisé dans le drag créature", src: "/images/nova.png" },
             { type: "texteBlanc", pseudo:"Nova", text: "Ici, nous faisons tous partie d’une famille ou d'un collectif différent !", src: "/images/nova.png" }
         ],
         responses: [
@@ -60,17 +60,17 @@ export const scenarios: Record<string, Scenario> = {
     organisation: {
         messages: [
             { type: "texteBlanc", pseudo:"Bergamote", mp:"bergamote", text: "Ok je vais t'expliquer tout ça :", src: "/images/bergamote.png" },
-            { type: "texteBlanc", pseudo:"Bergamote", text: "Organiser un show drag c'est comme pour les compagnies de théâtre ou de danse, en réservant des salles adaptées (comme une salle de concert avec une bonne technique, du bon matériel, car les show de Drag sont presque systématiquement accompagnés de musique, de chant et/ou de danse), tout en gérant les aspects logistiques (trains, hôtels pour les artistes invités). De plus, il faut s'assurer que tout est bien coordonné pour que le public ait une expérience exceptionnelle.", src: "/images/bergamote.png" },
+            { type: "texteBlanc", pseudo:"Bergamote", text: "Organiser un show drag c'est comme pour les compagnies de théâtre ou de danse, en réservant des salles adaptées (comme une salle de concert avec une bonne technique, du bon matériel, car les shows de Drag sont presque systématiquement accompagnés de musique, de chant et/ou de danse), tout en gérant les aspects logistiques (trains, hôtels pour les artistes invités). De plus, il faut s'assurer que tout est bien coordonné pour que le public ait une expérience exceptionnelle.", src: "/images/bergamote.png" },
         ],
         responses: [
             { text: "Comment les artistes se préparent ?", next: "artiste1"},
-            { text: "D'un point du vu technique comment ça se passe ?", next: "technique1"}
+            { text: "D'un point du vue technique comment ça se passe ?", next: "technique1"}
         ]
     },
 
     artiste1: {
         messages: [
-            { type: "texteBlanc", pseudo:"Bergamote", text: "Avant je mettais 4h à me préparer, maintenant j'en mets plus que 1h30.                                             4h c'est une demi journée, 'imagines. Le confienement à aidé. Parceque pendant le conf on dse faisait des visio pdnt en ser regardant, en discutant. Je me suis bcp entrainé au make up vu que j'avais rien d'autre à faire. Moyenne 2h pour se mettre en drag complètement" , src: "/images/bergamote.png" },
+            { type: "texteBlanc", pseudo:"Bergamote", mp:"bergamote", text: "Avant je mettais 4h à me préparer, maintenant j'en mets plus que 1h30. 4h c'est une demi journée. Le confinement à aidé. Parce que pendant le confinement on se faisait des visio en se regardant, en discutant. Je me suis bcp entrainée au make up vu que j'avais rien d'autre à faire. En moyenne 2h pour se mettre en drag complètement" , src: "/images/bergamote.png" },
         ],
         responses: [
             { text: "Je veux savoir comment se déroule un show !", next: "show2"}
@@ -83,7 +83,7 @@ export const scenarios: Record<string, Scenario> = {
             { type: "mediaBlanc", mediaType: "video", pseudo:"Freya Kor", text: "", src: "/images/freya.png", img: "/images/cover_show.png", video: "/videos/shows.mp4", transcription: "" },
         ],
         responses: [
-            { text: "D'un point du vu technique comment ça se passe ?", next: "technique2"}
+            { text: "D'un point du vue technique comment ça se passe ?", next: "technique2"}
         ]
     },
 
@@ -95,7 +95,7 @@ export const scenarios: Record<string, Scenario> = {
             { type: "audioBlanc", pseudo:"JoYeuX JoYauX", src: "/images/jay.png", img: "/audios/jay_dj.mp3", transcription: "En fait ça va commencer par écouter des sons, liker des sons, shazam ou en fait c'est ça je vais préparer une banque de données. Donc je vais créer une boîte, comme ils appellent ça, et je mets tous ces sons et je me retrouvais avec 100 ~ 200 musiques et je l'ai tri par couleur par bpm par clé par tout ça... Voilà du coup mon côté vraiment un peu maniaque c'est que tout début de son quand je lance un son c'est millimétré et je le prépare en amont", text: ""}
         ],
         responses: [
-            { text: "Waw, c'est impressionnant. J'aimerais bien en savoir plus sur la communauté drag en général", next: "commudrag"}
+            { text: "Mais comment vous faites pour organiser tout ça ?", next: "organisation2"}
         ]
     },
 
@@ -109,7 +109,7 @@ export const scenarios: Record<string, Scenario> = {
             { type: "audioBlanc", pseudo:"JoYeuX JoYauX", src: "/images/jay.png", img: "/audios/jay_dj.mp3", transcription: "En fait ça va commencer par écouter des sons, liker des sons, shazam ou en fait c'est ça je vais préparer une banque de données. Donc je vais créer une boîte, comme ils appellent ça, et je mets tous ces sons et je me retrouvais avec 100 ~ 200 musiques et je l'ai tri par couleur par bpm par clé par tout ça... Voilà du coup mon côté vraiment un peu maniaque c'est que tout début de son quand je lance un son c'est millimétré et je le prépare en amont", text: ""}
         ],
         responses: [
-            { text: "Ok super, est-ce que tu peux me montrer ce que ça donne lors d'un show ?", next: "show3"}
+            { text: "Merci pour tous ces partages !", next: "show3"}
         ]
     },
 
@@ -125,10 +125,10 @@ export const scenarios: Record<string, Scenario> = {
 
     artiste2: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", text: " ", src: "/images/orlane.png" }
+            { type: "texteBlanc", pseudo:"Bergamote", mp:"bergamote", text: "Avant je mettais 4h à me préparer, maintenant j'en mets plus que 1h30. 4h c'est une demi journée. Le confinement à aidé. Parce que pendant le confinement on se faisait des visio en se regardant, en discutant. Je me suis bcp entrainée au make up vu que j'avais rien d'autre à faire. En moyenne 2h pour se mettre en drag complètement" , src: "/images/bergamote.png"}
         ],
         responses: [
-            { text: "J'aimerais bien en savoir plus sur la communauté", next: "end"}
+            { text: "Mais comment vous faites pour organiser tout ça ?", next: "organisation2"}
         ]
     },
 
@@ -146,7 +146,7 @@ export const scenarios: Record<string, Scenario> = {
 
     artiste3: {
         messages: [
-            { type: "texteBlanc", pseudo:"Orlane", text: " ", src: "/images/orlane.png" }
+            { type: "texteBlanc", pseudo:"Bergamote", mp:"bergamote", text: "Avant je mettais 4h à me préparer, maintenant j'en mets plus que 1h30. 4h c'est une demi journée. Le confinement à aidé. Parce que pendant le confinement on se faisait des visio en se regardant, en discutant. Je me suis bcp entrainée au make up vu que j'avais rien d'autre à faire. En moyenne 2h pour se mettre en drag complètement" , src: "/images/bergamote.png" }
         ],
         responses: [
             { text: "La technique derrière doit être compliquée... Comment ça se passe ?", next: "technique3"}
@@ -159,6 +159,17 @@ export const scenarios: Record<string, Scenario> = {
             { type: "audioBlanc", pseudo:"JoYeuX JoYauX", src: "/images/jay.png", img: "/audios/jay_metier_tech.mp3", transcription: "On était 50 sur site de l'équipe ou t'as du coup la sénographie, t’as la communication t'as heu [...] Fin ça c’est des trucs sur site mais t’as aussi pardons mais... je m'égare tellement c’est énorme. Tu as les gens au bar, t’as les gens à l'accueil, t’as les gens au merch t’as les gens à la sécurité. Là où t’as plutôt le profil accueil des victimes ensuite à l'autre côté où c’est discuter / médiation. Il y a tous ces rôles là. ", text: ""},
             { type: "texteBlanc", pseudo:"JoYeuX JoYauX", text: "Pour ma part, étant DJ je vais t'expliquer comment je fais", src: "/images/jay.png" },
             { type: "audioBlanc", pseudo:"JoYeuX JoYauX", src: "/images/jay.png", img: "/audios/jay_dj.mp3", transcription: "En fait ça va commencer par écouter des sons, liker des sons, shazam ou en fait c'est ça je vais préparer une banque de données. Donc je vais créer une boîte, comme ils appellent ça, et je mets tous ces sons et je me retrouvais avec 100 ~ 200 musiques et je l'ai tri par couleur par bpm par clé par tout ça... Voilà du coup mon côté vraiment un peu maniaque c'est que tout début de son quand je lance un son c'est millimétré et je le prépare en amont", text: ""}
+        ],
+        responses: [
+            { text: "Mais comment vous faites pour organiser tout ça ?", next: "organisation2"}
+        ]
+    },
+
+
+    organisation2: {
+        messages: [
+            { type: "texteBlanc", pseudo:"Bergamote", text: "Ok je vais t'expliquer tout ça :", src: "/images/bergamote.png" },
+            { type: "texteBlanc", pseudo:"Bergamote", text: "Organiser un show drag c'est comme pour les compagnies de théâtre ou de danse, en réservant des salles adaptées (comme une salle de concert avec une bonne technique, du bon matériel, car les shows de Drag sont presque systématiquement accompagnés de musique, de chant et/ou de danse), tout en gérant les aspects logistiques (trains, hôtels pour les artistes invités). De plus, il faut s'assurer que tout est bien coordonné pour que le public ait une expérience exceptionnelle.", src: "/images/bergamote.png" },
         ],
         responses: [
             { text: "Merci pour tous ces partages !", next: "end"}
