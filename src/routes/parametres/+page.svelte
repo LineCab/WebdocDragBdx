@@ -338,7 +338,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 2vh 5vw;
-            background-color: rgba(238, 229, 220, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
         }

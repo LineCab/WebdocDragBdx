@@ -154,6 +154,9 @@
         height: 90vh;
         width: 100%;
         background-image: url(/images/fondMP.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
