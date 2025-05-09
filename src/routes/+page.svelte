@@ -146,7 +146,7 @@
         }
 
         .titre{
-            margin-top: 10vh;
+            margin-top: 5vh;
             width: 90vw;
         }
 
@@ -159,6 +159,7 @@
 
         .contenu {
             width: 90vw;
+            margin-bottom: 5vh;
         }
 
         #start {
