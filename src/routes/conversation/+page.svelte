@@ -16,6 +16,7 @@
     import BarreEnvoie from "$lib/composents/BarreEnvoie.svelte";
     import BulleMedia from "$lib/composents/BulleMedia.svelte";
     import BulleAudio from "$lib/composents/BulleAudio.svelte";
+    import Notification from '$lib/composents/Notification.svelte';
 
     type Message = {
         type: "texteVert" | "texteBlanc" | "mediaBlanc" | "audioBlanc";
@@ -143,6 +144,7 @@
         localStorage.setItem("notifOrlaneDisplayed", "false");
         localStorage.setItem("conversationOrlaneAffichee", "false");
         localStorage.setItem("notifBergamoteDisplayed", "false");
+        // localStorage.setItem("bergamoteNotification", "false");
         localStorage.setItem("conversationBergamoteAffichee", "false");
 
         loadScenario("start", $langue);
@@ -177,6 +179,94 @@
         layoutComponent.handleToggleMenu();
     }
 
+    
+    let bergamoteNotification = false;
+    let orlaneNotification = false;
+    let conversationOrlaneAffichee = false;
+    let conversationBergamoteAffichee = false;
+
+    if (typeof window !== "undefined") {
+
+        orlaneNotification = localStorage.getItem("notifOrlaneDisplayed") === "true";
+        bergamoteNotification = localStorage.getItem("notifBergamoteDisplayed") === "true";
+
+        conversationOrlaneAffichee = localStorage.getItem("conversationOrlaneAffichee") === "true";
+        conversationBergamoteAffichee = localStorage.getItem("conversationBergamoteAffichee") === "true";
+    }
+
+    let titre = "";
+    let titreConvG = "";
+    let convG = "";
+    let convBergamote = "";
+    let convOrlane = "";
+    let titreNotif = "";
+    let contenuNotif = "";
+    let parametre = "";
+
+    $: if ($langue === "fr"){
+        titre = "Vos conversations";
+        titreConvG = "La monde du drag";
+        convG = "Découvre le monde du drag"
+        convBergamote = "Découvre ma passion pour les costumes";
+        convOrlane = "Photographe, je t'apporte un regard extérieur";
+        titreNotif = "Nouvelle conversation";
+        contenuNotif = "Tu as rencontré une nouvelle personne. Dans tes conversations privées retrouve ";
+        parametre = "Paramètres";
+    }else if ($langue === "en"){
+        titre = "Your Conversations";
+        titreConvG = "The World of Drag";
+        convG = "Discover the world of drag";
+        convBergamote = "Discover my passion for costumes";
+        convOrlane = "Photographer, I bring you an outsider's perspective";
+        titreNotif = "New Conversation";
+        contenuNotif = "You have met a new person. Find them in your private conversations";
+        parametre = "Settings";
+    }else if ($langue === "es"){
+        titre = "Tus conversaciones";
+        titreConvG = "El mundo del drag";
+        convG = "Descubre el mundo del drag";
+        convBergamote = "Descubre mi pasión por los disfraces";
+        convOrlane = "Fotógrafa, te ofrezco una mirada externa";
+        titreNotif = "Nueva conversación";
+        contenuNotif = "Has conocido a una nueva persona. Encuéntrala en tus conversaciones privadas";
+        parametre = "Configuración";
+    }
+
+    function showNotifBergamote() {
+        showNotification('bergamote');
+        localStorage.setItem("notifBergamoteDisplayed", "true");
+    }
+
+    function showNotifOrlane() {
+        showNotification('orlane');
+        localStorage.setItem("notifOrlaneDisplayed", "true");
+    }
+
+    function showNotification(conversationType: string) {
+        if (conversationType === 'orlane') {
+            orlaneNotification = true;
+        } else if (conversationType === 'bergamote') {
+            bergamoteNotification = true;
+        }
+        setTimeout(() => {
+            if (conversationType === 'orlane') {
+                orlaneNotification = false;
+            } else if (conversationType === 'bergamote') {
+                bergamoteNotification = false;
+            }
+        }, 3000);
+    }
+
+    $: if ($messagePv === "bergamote" && !conversationBergamoteAffichee) {
+        conversationBergamoteAffichee = true;
+        localStorage.setItem("bergamoteNotification", "true");
+    }
+
+    $: if ($messagePv === "orlane" && !conversationOrlaneAffichee) {
+        conversationOrlaneAffichee = true;
+        localStorage.setItem("orlaneNotification", "true");
+    }
+
 </script>
 
 <Layout bind:this={layoutComponent}  onReset={onReset}>
@@ -199,7 +289,25 @@
                 {/if}
             {/each}
 
-        </div>  
+        </div>
+
+        {#if conversationBergamoteAffichee}
+            {#if !bergamoteNotification}
+                {showNotifBergamote()}
+                <div class="notification">
+                    <Notification titre={titreNotif} text="{contenuNotif}Bergamote Lips" src="/images/bergamote.png"/>
+                </div>
+            {/if}
+        {/if}
+
+        {#if conversationOrlaneAffichee}
+            {#if !orlaneNotification}
+                {showNotifOrlane()}
+                <div class="notification">
+                    <Notification titre={titreNotif} text="{contenuNotif}Orlane" src="/images/orlane.png"/>
+                </div>
+            {/if}
+        {/if}
 
         <div class="barreUtilisateur">
             <div class="reponses">
@@ -266,6 +374,37 @@
 
     .navBar{
         display: none;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+    .notification {
+        position: fixed;
+        right: 2vh;
+        top: 3vh;
+        opacity: 0;
+        animation: slideInFromRight 0.5s ease-out forwards, slideOutToRight 0.5s ease-out forwards 4s;
+        z-index: 999;
     }
 
     @media (max-width: 800px) {

@@ -5,7 +5,6 @@
     import { messagePv } from "$lib/stores/mpStore";
     import { langue } from "$lib/stores/langueStore";
     import Notification from './Notification.svelte';
-    // import createEventDispatcher;
 
     let orlaneNotification = false;
     let bergamoteNotification = false;
@@ -19,31 +18,6 @@
 
         conversationOrlaneAffichee = localStorage.getItem("conversationOrlaneAffichee") === "true";
         conversationBergamoteAffichee = localStorage.getItem("conversationBergamoteAffichee") === "true";
-    }
-
-    function showNotifOrlane() {
-        showNotification('orlane');
-        localStorage.setItem("notifOrlaneDisplayed", "true");
-    }
-
-    function showNotifBergamote() {
-        showNotification('bergamote');
-        localStorage.setItem("notifBergamoteDisplayed", "true");
-    }
-
-    function showNotification(conversationType: string) {
-        if (conversationType === 'orlane') {
-            orlaneNotification = true;
-        } else if (conversationType === 'bergamote') {
-            bergamoteNotification = true;
-        }
-        setTimeout(() => {
-            if (conversationType === 'orlane') {
-                orlaneNotification = false;
-            } else if (conversationType === 'bergamote') {
-                bergamoteNotification = false;
-            }
-        }, 3000);
     }
 
     $: if ($messagePv === "orlane" && !conversationOrlaneAffichee) {
@@ -118,23 +92,11 @@
         {#if conversationBergamoteAffichee}
             <BtnConversation path="./bergamote" nom="Bergamote Lips" message={convBergamote} img="/images/bergamote.png" />
             <hr>
-            {#if !bergamoteNotification}
-                {showNotifBergamote()}
-                <div class="notification">
-                    <Notification titre={titreNotif} text="{contenuNotif}Bergamote Lips" src="/images/bergamote.png"/>
-                </div>
-            {/if}
         {/if}
 
         {#if conversationOrlaneAffichee}
             <BtnConversation path="./orlane" nom="Orlane" message={convOrlane} img="/images/orlane.png" />
             <hr>
-            {#if !orlaneNotification}
-                {showNotifOrlane()}
-                <div class="notification">
-                    <Notification titre={titreNotif} text="{contenuNotif}Orlane" src="/images/orlane.png"/>
-                </div>
-            {/if}
         {/if}
     </div>
 
