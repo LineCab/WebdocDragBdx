@@ -137,8 +137,8 @@
 
     @media (max-width: 800px) {
         .accueil {
-            height: 90vh;
-            padding: 5vh 0;
+            height: 84vh;
+            padding: 8vh 0;
         }
 
         h1 {
