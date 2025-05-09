@@ -78,7 +78,7 @@
         .barreLateraleMobile{
             width: 100vw;
             z-index: 90;
-            position: absolute;
+            position: fixed;
         }
 
         .chat {
