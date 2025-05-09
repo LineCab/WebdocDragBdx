@@ -274,6 +274,10 @@
             gap: 2vh;
         }
 
+        .btns {
+            margin-bottom: 5vh;
+        }
+
         button {
             padding: 3vh 8vw;
             gap: 5vw;
