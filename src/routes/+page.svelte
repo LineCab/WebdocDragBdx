@@ -33,6 +33,8 @@
     .accueil {
         height: 80vh;
         width: 100%;
+        background-color: aliceblue;
+        background-image: url(/images/Accueil.png);
         display: flex;
         padding: 10vh 0;
         flex-direction: column;
@@ -135,8 +137,8 @@
 
     @media (max-width: 800px) {
         .accueil {
-            height: 100%;
-            padding: 0 0 0 0;
+            height: 90vh;
+            padding: 0 0 10vh 0;
         }
 
         h1 {

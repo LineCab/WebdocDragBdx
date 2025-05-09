@@ -301,6 +301,7 @@
         .conversation {
             width: 90vw;
             margin-bottom: 26vh;
+            margin-bottom: 32vh;
         }
 
         .barreUtilisateur {
